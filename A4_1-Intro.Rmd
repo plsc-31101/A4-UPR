@@ -1,0 +1,44 @@
+---
+title: "Assignment 4"
+author: "PLSC 31101"
+date: "Fall 2020"
+output: html_document
+---
+
+## Overview
+
+__Due__: Nov 16
+
+In this assignment, we'll use R to turn a bunch of loose text documents into a real-life database. 
+
+The task will leverage your new R skills, especially working with strings, functions, iterations -- and thinking like a programmer!
+
+NB: This project is based on a paper by [Rochelle Terman and Erik Voeten](https://link.springer.com/article/10.1007/s11558-016-9264-x), which involved much the same process as you'll be learning here.
+
+## About the Data
+
+We'll be creating a database from [Universal Period Review outcome reports](http://www.ohchr.org/EN/HRBodies/UPR/Pages/BasicFacts.aspx).
+
+The Universal Periodic Review (UPR) is a process run by the United Nations Human Rights Council, which involves a periodic review of the human rights records of all 193 UN Member States.
+
+Reviews take place through an interactive discussion between the State under review and other UN Member States. During this discussion any UN Member State can pose questions, comments and/or make recommendations to the States under review. States under review can then respond, stating which recommendations they reject, accept, will consider, etc. Reports are then drawn up detailing this discussion.
+
+We will be analyzing outcome reports from the 2014 Universal Period Reviews of 42 countries, which we retrieved [here](http://www.ohchr.org/EN/HRBodies/UPR/Pages/Documentation.aspx) and formatted as text documents.
+
+The goal is to convert these semi-structured texts to a tabular dataset of **recommendations** with the following variables:
+
+1. Text of recommendation (*text*)
+2. Country to which the recommendation is directed (*to*)
+3. Country that is making the recommendation (*from*)
+4. The year when the review took place (*year*)
+5. The response to the recommendation, i.e. whether the reviewed country rejects, accepts, etc (*decision*)
+
+In other words, we want to turn this:
+
+<img src="img/text.png" width="600">
+
+into this:
+
+<img src="img/tabular.png" width="400">
+
+Take a few minutes to look at the files, which are located in `data/txts`, and get a sense for how they're structured.
